@@ -1,0 +1,232 @@
+/*Varaiables*/
+:root {
+  --blue: #0366d6;
+  --white: #ffffff;
+  --orange: #f9826c;
+  --black: #24292e;
+  --grey: #fafbfc;
+  --border: #d1d5da;
+  --text: #586069;
+  --white-50: #e6e8eb;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+}
+
+/*Reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/*fix Styles*/
+
+.content {
+  min-height: 100%;
+}
+.content-inside {
+  padding-bottom: 8rem;
+}
+
+.container {
+  padding: 0rem 17rem 0rem 17rem;
+}
+
+.active {
+  border-bottom: 4px solid var(--orange);
+}
+
+.line {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid var(--border);
+}
+
+.heading {
+  font-size: 6rem;
+  color: var(--blue);
+}
+
+.text {
+  font-size: 2.2rem;
+  color: var(--text);
+}
+
+/*Styling*/
+
+.header {
+  max-height: 25rem;
+  background-color: var(--grey);
+  border-bottom: 4px solid var(--border);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background-color: var(--white-50);
+  margin-right: 6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: var(--medium);
+}
+
+.items {
+  display: flex;
+  position: absolute;
+  top: 68%;
+}
+
+.item {
+  font-size: 4rem;
+  margin-right: 6rem;
+  padding: 1rem;
+  font-weight: var(--medium);
+}
+
+.heading i {
+  display: none;
+}
+
+.footer {
+  height: 50px;
+  margin-top: -50px;
+  width: 100%;
+  background-color: var(--black);
+  color: white;
+  height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 3rem;
+  color: var(--white);
+  font-weight: var(--regular);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+  .heading {
+    font-size: 5rem;
+  }
+  .heading i {
+    display: inline;
+    margin-right: 1.5rem;
+  }
+  .items {
+    display: none;
+  }
+  .container {
+    padding: 0rem 3rem 0rem 3rem;
+  }
+
+  .logo {
+    height: 15rem;
+    width: 15rem;
+    margin-right: 2rem;
+  }
+  .title {
+    font-size: 3.6rem;
+  }
+  .text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+  .items {
+    display: flex;
+  }
+  .container {
+    padding: 0rem 3rem 0rem 3rem;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .text {
+    font-size: 2.5rem;
+  }
+  .items {
+    top: 78%;
+  }
+
+  .item {
+    font-weight: var(--medium);
+    font-size: 2rem;
+    margin-right: 5rem;
+    padding: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+  .items {
+    top: 76%;
+  }
+  .logo {
+    margin-right: 4rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html {
+    font-size: 10px;
+  }
+  .items {
+    top: 77%;
+  }
+  .heading {
+    font-size: 5rem;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+}
