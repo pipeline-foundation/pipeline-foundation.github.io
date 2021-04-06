@@ -31,6 +31,7 @@ li {
 a {
   text-decoration: none;
   color: var(--orange);
+  cursor: pointer;
 }
 a:hover {
   text-decoration: underline;
@@ -83,13 +84,12 @@ body {
   position: relative;
 }
 .logo {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  background-color: var(--white-50);
-  margin-right: 6rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  width: 15rem;
+  margin: 1rem 3rem 1rem 0;
+	text-align: center;
+}
+.logo img {
+	max-width: 100%;
 }
 .nav {
   display: flex;
@@ -103,8 +103,8 @@ body {
 
 .items {
   display: flex;
-  position: absolute;
-  top: 68%;
+	position: absolute;
+	bottom: -4px;
 }
 
 .item {
@@ -114,6 +114,10 @@ body {
   padding: 1rem;
   font-weight: var(--medium);
   color: var(--black);
+	border-bottom: 4px solid transparent;
+}
+.item:last-child {
+	margin-right: 0 !important;
 }
 .item:hover {
   border-bottom: 4px solid var(--orange);
@@ -123,12 +127,74 @@ body {
   display: none;
 }
 
+.case-studies > .text > li {
+	margin: 20px 0 0;
+}
+.case-studies > .text > li:first-child {
+	margin: 0;
+}
+.case-studies .item-video {
+	margin: 10px 0 0;
+}
+
+@media (max-width: 1099px) {
+	.case-studies .item-video {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		height: 0;
+	}
+	.case-studies .item-video iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.case-studies .item-right-s {
+	padding: 20px;
+	font-size: 16px;
+}
+.case-studies .item-description {
+}
+.case-studies blockquote {
+	margin: 10px 0 0;
+	padding: 15px 20px;
+	background-color:var(--grey);
+	font-style: italic;
+}
+.case-studies blockquote p {
+	font-style: normal;
+	margin: 5px 0 0;
+	text-align: right;
+}
+
 .footer {
+	position: relative;
   margin-top: 3rem;
   padding: 3rem;
   background-color: var(--black);
   color: white;
   text-align: center;
+}
+
+.footer .socials-list {
+	display: flex;
+	justify-content: center;
+}
+.footer .sl-item {
+	padding: 0 7px;
+}
+.footer .sl-link {
+	font-size: 0;
+}
+.footer .sl-icon {
+	font-size: 28px;
+	color: #fff;
+}
+.footer .sl-icon:hover {
+	color: #eee;
 }
 
 .footer .copyright {
@@ -155,9 +221,6 @@ body {
     display: inline;
     margin-right: 1.5rem;
   }
-  .items {
-    display: none;
-  }
   .item a {
     text-decoration: none;
   }
@@ -165,16 +228,17 @@ body {
     padding: 0rem 3rem 0rem 3rem;
   }
 
-  .logo {
-    height: 15rem;
-    width: 15rem;
-    margin-right: 2rem;
-  }
   .title {
     font-size: 3.6rem;
   }
   .text {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .items {
+    display: none !important;
   }
 }
 
@@ -195,14 +259,11 @@ body {
   .text {
     font-size: 2.5rem;
   }
-  .items {
-    top: 78%;
-  }
 
   .item {
     font-weight: var(--medium);
     font-size: 2rem;
-    margin-right: 5rem;
+    margin-right: 3rem;
     padding: 1rem;
   }
 }
@@ -213,9 +274,21 @@ body {
     font-size: 7px;
   }
 
+	.case-studies .item-title {
+		font-size: 24px;
+	}
+
   .footer {
     overflow: hidden;
   }
+
+	.footer .socials-list {
+		position: absolute;
+		display: flex;
+		top: 18px;
+		left: 0;
+		right: 0;
+	}
 
   .footer .copyright {
     float: right;
@@ -232,11 +305,38 @@ body {
   html {
     font-size: 8px;
   }
-  .items {
-    top: 76%;
-  }
-  .logo {
-    margin-right: 4rem;
+	.footer .socials-list {
+		top: 24px;
+	}	
+}
+
+@media (min-width: 1100px) {
+	.case-studies .text > li {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+	}
+
+  .case-studies .item-right-s {
+		margin: 0;
+		max-width: 620px;
+		background: none;
+		padding: 0 0 0 40px;
   }
 }
 
@@ -255,4 +355,8 @@ body {
   .text {
     font-size: 2rem;
   }
+
+	.footer .socials-list {
+		top: 32px;
+	}
 }
