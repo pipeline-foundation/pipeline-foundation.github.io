@@ -127,6 +127,45 @@ body {
   display: none;
 }
 
+.faq .faq-item {
+	margin: 10px 0 0;
+	max-width: 560px;
+}
+.faq .faq-item:first-child {
+	margin: 0;
+}
+.faq .faq-answer {
+	font-size: 14px;
+	padding: 10px;
+	margin: 5px 0 0;
+	background-color: var(--grey);
+}
+.faq .btn-wrap {
+	margin: 10px 0 0;
+}
+.faq .btn-apply {
+	background: var(--blue);
+	color: #fff;
+	position: relative;
+	display: inline-block;
+	padding: 5px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	white-space: nowrap;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid;
+	border-radius: 6px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	text-decoration: none !important;
+}
+
 .case-studies > .text > li {
 	margin: 20px 0 0;
 }
