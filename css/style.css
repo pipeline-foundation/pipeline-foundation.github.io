@@ -68,8 +68,12 @@ body {
 }
 
 .text {
+	margin: 10px 0 0;
   font-size: 2.2rem;
   color: var(--text);
+}
+.text:first-of-type {
+	margin: 0;
 }
 
 /*Styling*/
@@ -127,6 +131,10 @@ body {
   display: none;
 }
 
+.vision > p.text {
+	max-width: 1200px;
+}
+
 .faq .faq-item {
 	margin: 10px 0 0;
 	max-width: 560px;
@@ -169,6 +177,10 @@ body {
 .case-studies > .text > li {
 	margin: 20px 0 0;
 }
+.case-studies > p.text {
+	margin: 10px 0 20px;
+	max-width: 1200px;
+}
 .case-studies > .text > li:first-child {
 	margin: 0;
 }
@@ -209,9 +221,20 @@ body {
 	text-align: right;
 }
 
+.sponsor-message {
+	padding: 35px;
+	font-size: 2rem;
+	text-align: center;
+	margin: 25px 0 0;
+	background: #e7e8e9;
+}
+.sponsor-message > p {
+	margin: auto;
+	max-width: 1200px;
+}
+
 .footer {
 	position: relative;
-  margin-top: 3rem;
   padding: 3rem;
   background-color: var(--black);
   color: white;
